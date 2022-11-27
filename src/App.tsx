@@ -9,9 +9,9 @@ function App() {
 	const { dark }: ThemeContextType = useThemeContext();
 
 	return (
-		<div className={`min-h-screen font-nuito ${dark && "dark"}`}>
+		<div className={`${dark && "dark"}`}>
 			<Header />
-			<main>
+			<main className="py-8">
 				<div className="mx-auto flex w-11/12 max-w-7xl items-center justify-center">
 					<Routes>
 						<Route path="/" element={<Home />} />
