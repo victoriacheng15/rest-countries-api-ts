@@ -12,7 +12,7 @@ function Header() {
 				</h1>
 				<button
 					type="button"
-					className="flex items-center gap-2 border-2 p-2 border-darkBlue-900 rounded-lg dark:border-lightGray-700 capitalize"
+					className="flex items-center gap-2 rounded-lg border-2 border-darkBlue-900 p-2 capitalize dark:border-lightGray-700"
 					onClick={setDark}
 				>
 					{dark ? <DarkTheme /> : <LightTheme />}
