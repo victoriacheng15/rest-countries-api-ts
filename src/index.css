@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply min-h-screen font-nuito;
+    @apply font-nuito;
   }
 }
