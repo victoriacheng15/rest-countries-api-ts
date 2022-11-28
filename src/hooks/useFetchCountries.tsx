@@ -80,9 +80,10 @@ const useFetchCountries = () => {
 
 	const sortedCountries = useMemo(() => {
 		return countries.sort((a, b) =>
+		//@ts-ignore
 			a.name.official.localeCompare(b.name.official),
 		);
-	}, []);
+	}, [countries]);
 
 	return { countries: sortedCountries, loading, error };
 };
