@@ -13,7 +13,7 @@
     "rome:write": "pnpm exec rome format src/ --write",
     "prettier:tw": "prettier src/ --plugin=prettier-plugin-tailwindcss --write",
     "format": "pnpm prettier:tw && pnpm rome:write",
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "react": "^18.2.0",
