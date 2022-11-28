@@ -2,17 +2,17 @@ import Home from "./pages/Home";
 import Country from "./pages/Country";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import { useThemeContext, ThemeContextType } from "./contexts/ThemeContext";
+import { useThemeContext} from "./contexts/ThemeContext";
 import Footer from "./components/Footer";
 
 function App() {
-	const { dark }: ThemeContextType = useThemeContext();
+	const { dark } = useThemeContext();
 
 	return (
 		<div className={`${dark && "dark"}`}>
 			<Header />
-			<main className="py-8">
-				<div className="mx-auto flex w-11/12 max-w-7xl items-center justify-center">
+			<main className="min-h-screen bg-lightGray-800 py-12 dark:bg-darkBlue-800">
+				<div className="mx-auto flex flex-col w-11/12 max-w-7xl items-center justify-center">
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/country" element={<Country />} />
