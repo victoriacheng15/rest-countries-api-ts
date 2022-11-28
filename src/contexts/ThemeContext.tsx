@@ -5,10 +5,6 @@ export interface ThemeContextType {
 	setDark: () => void;
 }
 
-interface ChildrenProps {
-	children: React.ReactNode;
-}
-
 const ThemeContext = createContext({} as ThemeContextType);
 
 const initialState = false;

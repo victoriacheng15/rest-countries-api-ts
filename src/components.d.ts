@@ -1,9 +1,8 @@
-interface CountryCardProps {
-	alphaCode?: number;
+interface ChildrenProps {
+	children: React.ReactNode;
+}
+
+interface CountryCardProps extends Countries {
 	name: string;
 	flags: string;
-	alt: string;
-	population: number;
-	region: string;
-	countryCapital: string;
 }
