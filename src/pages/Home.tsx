@@ -1,29 +1,18 @@
-import Form from "../components/Form";
-import CountryCard from "../components/CountryCard";
-import useFetchCountries from "../hooks/useFetchCountries";
+import { Route, Routes } from "react-router-dom";
+import Countries from "./Countries";
+import Country from "./Country";
 
 function Home() {
-	const { countries } = useFetchCountries();
-	
 	return (
 		<>
-			<Form />
-			<section className="mx-auto flex max-w-7xl flex-wrap justify-between gap-8">
-				{countries
-					.slice(0, 70)
-					.map(({ name, capital, flags, region, population, cca2 }: any) => (
-						<CountryCard
-							key={cca2}
-							alphaCode={cca2}
-							name={name.official}
-							countryCapital={capital || "N/A"}
-							region={region}
-							flags={flags.png}
-							alt={name.official}
-							population={population}
-						/>
-					))}
-			</section>
+			<main className="min-h-screen bg-lightGray-800 py-12 dark:bg-darkBlue-800">
+				<div className="mx-auto flex w-11/12 max-w-7xl flex-col items-center justify-center">
+					<Routes>
+						<Route path="/" element={<Countries />} />
+						<Route path="/country" element={<Country />} />
+					</Routes>
+				</div>
+			</main>
 		</>
 	);
 }

@@ -5,31 +5,16 @@ enum FetchActions {
 	FETCH_SUCCESS = "fetch_success",
 	FETCH_ERROR = "fetch_error",
 }
-
-interface Countries {
-	name: string;
-	alphaCode: string;
-	alt: string;
-	countryCapital: string;
-	region: string;
-	flags: string;
-	population: string;
+interface FetchSuccess {
+	type: FetchActions.FETCH_SUCCESS;
+	payload: Countries[];
 }
 
-interface CountriesState {
-	countries: Countries[];
-	loading: boolean;
-	error: string;
+interface FetchFailure {
+	type: FetchActions.FETCH_ERROR;
 }
 
-type CountriesAction =
-	| {
-			type: FetchActions.FETCH_SUCCESS;
-			payload: Countries[];
-	  }
-	| {
-			type: FetchActions.FETCH_ERROR;
-	  };
+type CountriesAction = FetchSuccess | FetchFailure;
 
 const initialState = {
 	countries: [],
@@ -80,7 +65,6 @@ const useFetchCountries = () => {
 
 	const sortedCountries = useMemo(() => {
 		return countries.sort((a, b) =>
-		//@ts-ignore
 			a.name.official.localeCompare(b.name.official),
 		);
 	}, [countries]);
