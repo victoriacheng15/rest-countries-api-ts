@@ -1,10 +1,13 @@
+import Form from "../components/Form";
 import CountryCard from "../components/CountryCard";
 import useFetchCountries from "../hooks/useFetchCountries";
 
 function Home() {
 	const { countries } = useFetchCountries();
+	
 	return (
 		<>
+			<Form />
 			<section className="mx-auto flex max-w-7xl flex-wrap justify-between gap-8">
 				{countries
 					.slice(0, 70)
