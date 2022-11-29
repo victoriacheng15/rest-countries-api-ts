@@ -7,3 +7,9 @@
     @apply font-nuito;
   }
 }
+
+@layer components {
+  .page-box {
+    @apply grid aspect-square w-12 place-items-center border-4 text-2xl font-bold  md:w-14 rounded-md;
+  }
+}
