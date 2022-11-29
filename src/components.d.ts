@@ -6,3 +6,8 @@ interface CountryCardProps extends Countries {
 	name: string;
 	flags: string;
 }
+
+interface DisplayPagesProps {
+	displayPages: number[]
+	currentPage: number
+}
