@@ -8,6 +8,11 @@ interface CountryCardProps extends Countries {
 }
 
 interface DisplayPagesProps {
-	displayPages: number[]
-	currentPage: number
+	displayPages: number[];
+	currentPage: number;
+}
+
+interface ParagraphProps {
+	title: string;
+	content: string | any;
 }
