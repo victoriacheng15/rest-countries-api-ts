@@ -13,10 +13,10 @@ function Home() {
 			<Form />
 			<section className="mx-auto mb-12 flex max-w-[1440px] flex-wrap justify-evenly gap-10">
 				{currentList.map(
-					({ cca2, name, flags, region, population, capital }: Countries) => (
+					({ cca3, name, flags, region, population, capital }: Countries) => (
 						<CountryCard
-							key={cca2}
-							cca2={cca2}
+							key={cca3}
+							cca3={cca3}
 							flags={flags.png}
 							alt={name.official}
 							name={name.official}
