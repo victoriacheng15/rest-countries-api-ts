@@ -1,5 +1,5 @@
 interface Countries {
-	cca2: string;
+	cca3: string;
 	flags: {
 		[key: string]: string;
 	};
@@ -14,6 +14,28 @@ interface Countries {
 
 interface CountriesState {
 	countries: Countries[];
+	loading: boolean;
+	error: string;
+}
+
+interface Country extends Countries {
+	subregion: string;
+	tld: string[];
+	currencies: {
+		[key: string]: {
+			name: string;
+		};
+	};
+	languages: {
+		[key: string]: {
+			[key: string]: string;
+		};
+	};
+	borders: string[];
+}
+
+interface CountryState {
+	country: Country[];
 	loading: boolean;
 	error: string;
 }
