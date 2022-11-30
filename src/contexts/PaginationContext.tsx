@@ -44,13 +44,13 @@ export function PaginationProvider({ children }: ChildrenProps) {
 	const backward = () => {
 		const condition = currentPage > total - 2;
 		if (condition) {
-		  setCurrentPage(prev => prev - 1);
-		  setStart(prev => prev >= total - 5 ? total - 5 : start - 1);
-		  setEnd(prev => prev >= total - 5 ? total : end - 1);
+			setCurrentPage((prev) => prev - 1);
+			setStart((prev) => (prev >= total - 5 ? total - 5 : start - 1));
+			setEnd((prev) => (prev >= total - 5 ? total : end - 1));
 		} else {
-		  setCurrentPage(prev => prev <= 1 ? 1 : prev - 1);
-		  setStart(start <= 0 ? 0 : start - 1);
-		  setEnd(end <= 5 ? 5 : end - 1);
+			setCurrentPage((prev) => (prev <= 1 ? 1 : prev - 1));
+			setStart(start <= 0 ? 0 : start - 1);
+			setEnd(end <= 5 ? 5 : end - 1);
 		}
 	};
 

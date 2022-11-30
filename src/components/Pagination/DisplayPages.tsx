@@ -1,5 +1,4 @@
-function DisplayPages({displayPages, currentPage}: DisplayPagesProps) {
-
+function DisplayPages({ displayPages, currentPage }: DisplayPagesProps) {
 	return (
 		<div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
 			{displayPages.map((num) =>
