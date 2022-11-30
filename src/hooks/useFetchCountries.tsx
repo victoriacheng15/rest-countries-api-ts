@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useReducer } from "react";
 import url from "./fetchUrls";
 
-enum FetchActions {
+export enum FetchActions {
 	FETCH_SUCCESS = "fetch_success",
 	FETCH_ERROR = "fetch_error",
 }
+
 interface FetchSuccess {
 	type: FetchActions.FETCH_SUCCESS;
 	payload: Countries[];
