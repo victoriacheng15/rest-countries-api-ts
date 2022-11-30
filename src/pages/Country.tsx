@@ -1,5 +1,11 @@
+import DetailedCountry from "../components/DetailedCountry";
+
 function Country() {
-	return <div>Country</div>;
+	return (
+		<>
+			<DetailedCountry />
+		</>
+	);
 }
 
 export default Country;
