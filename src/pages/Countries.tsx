@@ -1,11 +1,7 @@
-import Form from "../components/Form";
-import CountryCard from "../components/CountryCard";
-import { useCountriesContext } from "../contexts/CountriesContext";
+import { Form, CountryCard, Pagination } from "../components";
 import { usePaginationContext } from "../contexts/PaginationContext";
-import Pagination from "../components/Pagination";
 
 function Home() {
-	const { countries } = useCountriesContext();
 	const { currentList } = usePaginationContext();
 
 	return (
