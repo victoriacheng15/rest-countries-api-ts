@@ -16,3 +16,13 @@ interface ParagraphProps {
 	title: string;
 	content: string | any;
 }
+
+interface FlagProps {
+	src: string;
+	alt: string;
+}
+
+interface BorderBtnProps {
+	to: string;
+	borderName: string;
+}
