@@ -30,12 +30,10 @@ const reducer = (state: CountriesState, action: CountriesAction) => {
 				...state,
 				countries: action.payload,
 				loading: false,
-				error: "",
 			};
 		case FetchActions.FETCH_ERROR:
 			return {
 				...state,
-				countries: [],
 				loading: false,
 				error: "Something went wrong",
 			};
