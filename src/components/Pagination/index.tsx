@@ -6,11 +6,15 @@ function Pagination() {
 	const { displayPages, currentPage } = usePaginationContext();
 
 	return (
-		<section className="flex items-center justify-center gap-6">
+		<nav
+			className="flex items-center justify-center gap-6"
+			role="navigation"
+			aria-label="pagination navigation"
+		>
 			<ArrowButtons>
 				<DisplayPages displayPages={displayPages} currentPage={currentPage} />
 			</ArrowButtons>
-		</section>
+		</nav>
 	);
 }
 

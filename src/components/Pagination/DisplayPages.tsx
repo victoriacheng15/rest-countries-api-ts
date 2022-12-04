@@ -1,24 +1,25 @@
 function DisplayPages({ displayPages, currentPage }: DisplayPagesProps) {
 	return (
-		<div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+		<ul className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
 			{displayPages.map((num) =>
 				currentPage === num ? (
-					<span
+					<li
 						key={num}
 						className="page-box border-darkBlue-700 dark:border-lightGray-700 dark:text-lightGray-800"
+						aria-current="true"
 					>
 						{num}
-					</span>
+					</li>
 				) : (
-					<span
+					<li
 						key={num}
 						className="page-box rounded-full border-lightGray-900  dark:border-lightGray-900 dark:text-lightGray-700"
 					>
 						{num}
-					</span>
+					</li>
 				),
 			)}
-		</div>
+		</ul>
 	);
 }
 
