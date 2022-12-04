@@ -7,7 +7,6 @@ import Spinner from "../components/Spinner";
 
 function Home() {
 	const { loading, error } = useCountriesContext();
-	console.log(error)
 
 	return (
 		<>
