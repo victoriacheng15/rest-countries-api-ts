@@ -9,11 +9,11 @@ function ErrorPage() {
 					href="https://github.com/victoriacheng15/rest-countries-api-ts/issues"
 					target="_blank"
 					rel="noreferrer"
-          className="underline"
+					className="underline"
 				>
 					link
 				</a>
-        . Otherwise, let's go back home!
+				. Otherwise, let's go back home!
 			</p>
 		</section>
 	);
