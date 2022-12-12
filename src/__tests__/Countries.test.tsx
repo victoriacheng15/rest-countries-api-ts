@@ -1,13 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../test-utils";
 import user from "@testing-library/user-event";
-import Form from ".";
-import { CountriesProvider } from "../../contexts/CountriesContext";
+import Countries from "../pages/Countries";
 
-describe("Form", () => {
+describe("Countries Page", () => {
 	beforeEach(() => {
-		render(<Form />, {
-			wrapper: CountriesProvider
-		});
+		render(<Countries />);
 	});
 
 	it("should renders SearchBar", () => {
@@ -15,12 +12,12 @@ describe("Form", () => {
 		expect(searchbox).toBeInTheDocument();
 	});
 
-	it('should have value of Canada in searchbox', async () => {
-	  user.setup()
-	  const searchInput = screen.getByRole('textbox')
-	  await user.type(searchInput, "canada")
-	  expect(searchInput).toHaveValue("canada")
-	})
+	it("should have value of Canada in searchbox", async () => {
+		user.setup();
+		const searchInput = screen.getByRole("textbox");
+		await user.type(searchInput, "canada");
+		expect(searchInput).toHaveValue("canada");
+	});
 
 	it("should renders dropdown correctly", () => {
 		const dropdown = screen.getByRole("combobox");
