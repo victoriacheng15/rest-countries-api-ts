@@ -15,7 +15,7 @@ interface Countries {
 interface CountriesState {
 	countries: Countries[];
 	loading: boolean;
-	error: string;
+	error: string | null;
 }
 
 interface Country extends Countries {
