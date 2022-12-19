@@ -6,21 +6,14 @@ export enum FetchActions {
 	FETCH_ERROR = "fetch_error",
 }
 
-interface FetchSuccess {
-	type: FetchActions.FETCH_SUCCESS;
-	payload: Countries[];
-}
-
-interface FetchFailure {
-	type: FetchActions.FETCH_ERROR;
-}
-
-type CountriesAction = FetchSuccess | FetchFailure;
+type CountriesAction =
+	| { type: FetchActions.FETCH_SUCCESS; payload: Countries[] }
+	| { type: FetchActions.FETCH_ERROR; payload: string };
 
 const initialState = {
 	countries: [],
 	loading: true,
-	error: "",
+	error: null,
 };
 
 const reducer = (state: CountriesState, action: CountriesAction) => {
@@ -35,7 +28,7 @@ const reducer = (state: CountriesState, action: CountriesAction) => {
 			return {
 				...state,
 				loading: false,
-				error: "Something went wrong",
+				error: action.payload,
 			};
 		default:
 			return state;
@@ -55,7 +48,7 @@ const useFetchCountries = () => {
 				const data = await res.json();
 				dispatch({ type: FetchActions.FETCH_SUCCESS, payload: data });
 			} catch (error) {
-				dispatch({ type: FetchActions.FETCH_ERROR });
+				dispatch({ type: FetchActions.FETCH_ERROR, payload: error });
 			}
 		};
 
