@@ -1,4 +1,3 @@
-import { type } from "os";
 import { useReducer, useEffect } from "react";
 import url from "./fetchUrls";
 import { FetchActions } from "./useFetchCountries";
@@ -57,7 +56,7 @@ const useFetchCountry = (code: string | undefined) => {
 		};
 
 		fetchCountry();
-	});
+	}, [code]);
 
 	return { country, loading, error };
 };
