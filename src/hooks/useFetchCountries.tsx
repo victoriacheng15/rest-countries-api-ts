@@ -8,7 +8,7 @@ export enum FetchActions {
 
 type CountriesAction =
 	| { type: FetchActions.FETCH_SUCCESS; payload: Countries[] }
-	| { type: FetchActions.FETCH_ERROR; payload: string };
+	| { type: FetchActions.FETCH_ERROR };
 
 const initialState = {
 	countries: [],
@@ -28,7 +28,7 @@ const reducer = (state: CountriesState, action: CountriesAction) => {
 			return {
 				...state,
 				loading: false,
-				error: action.payload,
+				error: "something went wrong",
 			};
 		default:
 			return state;
@@ -48,7 +48,7 @@ const useFetchCountries = () => {
 				const data = await res.json();
 				dispatch({ type: FetchActions.FETCH_SUCCESS, payload: data });
 			} catch (error) {
-				dispatch({ type: FetchActions.FETCH_ERROR, payload: error });
+				dispatch({ type: FetchActions.FETCH_ERROR });
 			}
 		};
 

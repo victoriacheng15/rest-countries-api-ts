@@ -31,24 +31,24 @@ export function PaginationProvider({ children }: ChildrenProps) {
 		const FIVE = displayPages.length;
 		const condition = currentPage <= Math.floor(FIVE / 2);
 		if (condition) {
-			setCurrentPage((prev) => prev + 1);
+			setCurrentPage((prevPage) => prevPage + 1);
 			setStart(0);
 			setEnd(5);
 		} else {
-			setCurrentPage((prev) => (prev >= total ? total : prev + 1));
-			setStart((prev) => (prev >= total - 5 ? total - 5 : start + 1));
-			setEnd((prev) => (prev >= total ? total : end + 1));
+			setCurrentPage((prevPage) => (prevPage >= total ? total : prevPage + 1));
+			setStart((prevPage) => (prevPage >= total - 5 ? total - 5 : start + 1));
+			setEnd((prevPage) => (prevPage >= total ? total : end + 1));
 		}
 	};
 
 	const backward = () => {
 		const condition = currentPage > total - 2;
 		if (condition) {
-			setCurrentPage((prev) => prev - 1);
-			setStart((prev) => (prev >= total - 5 ? total - 5 : start - 1));
-			setEnd((prev) => (prev >= total - 5 ? total : end - 1));
+			setCurrentPage((prevPage) => prevPage - 1);
+			setStart((prevPage) => (prevPage >= total - 5 ? total - 5 : start - 1));
+			setEnd((prevPage) => (prevPage >= total - 5 ? total : end - 1));
 		} else {
-			setCurrentPage((prev) => (prev <= 1 ? 1 : prev - 1));
+			setCurrentPage((prevPage) => (prevPage <= 1 ? 1 : prevPage - 1));
 			setStart(start <= 0 ? 0 : start - 1);
 			setEnd(end <= 5 ? 5 : end - 1);
 		}
