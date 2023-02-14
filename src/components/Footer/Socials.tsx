@@ -3,7 +3,7 @@ import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 export function Github() {
 	return (
 		<a
-			href="https://github.com/victoriacheng15"
+			href="https://github.com/victoriacheng15/rest-countries-api-ts#readme"
 			target="_blank"
 			rel="noreferrer"
 		>
