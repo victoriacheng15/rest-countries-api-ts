@@ -4,7 +4,11 @@ This is an app that I rebuilt with TypeScript. You can see the [JS version](http
 
 An app contains `search` and `dropdown` features where users can use a search box to search the desired country and use the dropdown to filter countries by regions (Africa, Americas, Asia, Europe, and Oceania). The users also can click a country to view more detailed information.
 
-[Demo](https://rest-countries-api-ts-vc.netlify.app/)
+[View the site live here](https://rest-countries-api-ts-vc.netlify.app/)
+
+**Tech stack:**
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black) ![React Router](https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white) ![Testing Library](https://img.shields.io/badge/Testing%20Library-E33332.svg?style=for-the-badge&logo=Testing-Library&logoColor=white)
 
 ## Screenshots/GIFs
 
@@ -55,17 +59,28 @@ Users should be able to:
 - [x] Click through to the border countries on the detail page
 - [x] Toggle the color scheme between light and dark mode
 
+## Run Locally
+
+If you would like to run this project locally, you can follow the steps below. And make sure you have `nodejs` installed on your computer.
+
+```bash
+git clone git@github.com:victoriacheng15/rest-countries-api-ts.git
+```
+
+```bash
+cd rest-countries-api-ts.git
+```
+
+```bash
+# or your preference for the package
+npm install
+```
+
+```bash
+npm run dev
+```
+
 ## My process
-
-### Built with
-
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [React Router - v6](https://reactrouter.com/en/v6.3.0)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [React Icons](https://react-icons.github.io/react-icons/)
-- [Vite](https://vitejs.dev/)
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 ### What I learned
 
