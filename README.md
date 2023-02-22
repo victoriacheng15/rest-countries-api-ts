@@ -10,6 +10,17 @@ An app contains `search` and `dropdown` features where users can use a search bo
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black) ![React Router](https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white) ![Testing Library](https://img.shields.io/badge/Testing%20Library-E33332.svg?style=for-the-badge&logo=Testing-Library&logoColor=white)
 
+## The User Stories
+
+Users should be able to:
+
+- [x] See all countries from the API on the homepage with pagination
+- [x] Search for a country using an `input` field
+- [x] Filter countries by region
+- [x] Click on a country to see more detailed information on a separate page
+- [x] Click through to the border countries on the detail page
+- [x] Toggle the color scheme between light and dark mode
+
 ## Screenshots/GIFs
 
 <details close>
@@ -48,17 +59,6 @@ An app contains `search` and `dropdown` features where users can use a search bo
 
 <hr />
 
-## The challenge
-
-Users should be able to:
-
-- [x] See all countries from the API on the homepage with pagination
-- [x] Search for a country using an `input` field
-- [x] Filter countries by region
-- [x] Click on a country to see more detailed information on a separate page
-- [x] Click through to the border countries on the detail page
-- [x] Toggle the color scheme between light and dark mode
-
 ## Run Locally
 
 If you would like to run this project locally, you can follow the steps below. And make sure you have `nodejs` installed on your computer.
@@ -80,9 +80,7 @@ npm install
 npm run dev
 ```
 
-## My process
-
-### What I learned
+## What I learned
 
 **TypeScript**
 
@@ -120,6 +118,4 @@ I am looking to add React Testing Library for this project to solidify my knowle
 
 ## Author
 
-- [GitHub](https://github.com/victoriacheng15)
-- [LinkedIn](https://www.linkedin.com/in/victoriacheng15/)
-- [Twitter](https://twitter.com/viktoriacheng15)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/victoriacheng15/) [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/viktoriacheng15)
