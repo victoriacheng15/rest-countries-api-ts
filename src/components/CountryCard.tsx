@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Paragraph from "../Paragraph";
+import Paragraph from "./Paragraph";
 
 function CountryCard({
 	cca3,
