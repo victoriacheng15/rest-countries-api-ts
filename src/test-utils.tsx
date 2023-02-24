@@ -5,7 +5,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { CountriesProvider } from "./contexts/CountriesContext";
 import { PaginationProvider } from "./contexts/PaginationContext";
 
-const AllProviders = ({ children }: ChildrenProps) => {
+const AllProviders = ({ children }: ChildrenProp) => {
 	return (
 		<BrowserRouter>
 			<ThemeProvider>
