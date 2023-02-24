@@ -1,15 +1,10 @@
 import { createContext, useContext, useReducer } from "react";
 
-export interface ThemeContextType {
-	dark: boolean;
-	setDark: () => void;
-}
-
 const ThemeContext = createContext({} as ThemeContextType);
 
 const initialState = false;
 
-export function ThemeProvider({ children }: ChildrenProps) {
+export function ThemeProvider({ children }: ChildrenProp) {
 	const [dark, setDark] = useReducer(
 		(prevMode: boolean) => !prevMode,
 		initialState,

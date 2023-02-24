@@ -1,4 +1,4 @@
-interface ChildrenProps {
+interface ChildrenProp {
 	children: React.ReactNode;
 }
 
@@ -7,14 +7,14 @@ interface CountryCardProps extends Countries {
 	flags: string;
 }
 
-interface DisplayPagesProps {
-	displayPages: number[];
-	currentPage: number;
-}
+type DisplayPagesProps = Pick<
+	PaginationContextType,
+	"displayPages" | "currentPage"
+>;
 
 interface ParagraphProps {
 	title: string;
-	content: string | any;
+	content: string;
 }
 
 interface FlagProps {

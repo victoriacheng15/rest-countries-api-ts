@@ -1,9 +1,21 @@
-import { DarkTheme, LightTheme } from "./Theme";
-import { useThemeContext, ThemeContextType } from "../../contexts/ThemeContext";
+import { useThemeContext } from "../contexts/ThemeContext";
 import { Link } from "react-router-dom";
+import { IoMoonOutline, IoMoon } from "react-icons/io5";
 
 function Header() {
-	const { dark, setDark }: ThemeContextType = useThemeContext();
+	const { dark, setDark } = useThemeContext();
+
+	const DarkTheme = () => (
+		<>
+			<IoMoon /> dark mode
+		</>
+	);
+
+	const LightTheme = () => (
+		<>
+			<IoMoonOutline /> light mode
+		</>
+	);
 
 	return (
 		<header className="bg-lightGray-700 py-12 text-darkBlue-900 dark:bg-darkBlue-700 dark:text-lightGray-700 md:py-8">

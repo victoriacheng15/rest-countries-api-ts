@@ -1,17 +1,9 @@
 import { createContext, useState, useContext } from "react";
 import { useCountriesContext } from "./CountriesContext";
 
-interface PaginationContextType {
-	currentPage: number;
-	displayPages: number[];
-	currentList: Countries[];
-	forward: () => void;
-	backward: () => void;
-}
-
 const PaginationContext = createContext({} as PaginationContextType);
 
-export function PaginationProvider({ children }: ChildrenProps) {
+export function PaginationProvider({ children }: ChildrenProp) {
 	const { countries } = useCountriesContext();
 
 	const [listPerPage] = useState(12);

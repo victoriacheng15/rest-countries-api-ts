@@ -1,43 +1,17 @@
 import { useEffect, useMemo, useReducer } from "react";
+import { countriesReducer } from "../utils/reducers";
+import { FETCH_SUCCESS, FETCH_ERROR } from "../utils/constants";
 import url from "./fetchUrls";
-
-export enum FetchActions {
-	FETCH_SUCCESS = "fetch_success",
-	FETCH_ERROR = "fetch_error",
-}
-
-type CountriesAction =
-	| { type: FetchActions.FETCH_SUCCESS; payload: Countries[] }
-	| { type: FetchActions.FETCH_ERROR };
 
 const initialState = {
 	countries: [],
 	loading: true,
-	error: null,
-};
-
-const reducer = (state: CountriesState, action: CountriesAction) => {
-	switch (action.type) {
-		case FetchActions.FETCH_SUCCESS:
-			return {
-				...state,
-				countries: action.payload,
-				loading: false,
-			};
-		case FetchActions.FETCH_ERROR:
-			return {
-				...state,
-				loading: false,
-				error: "something went wrong",
-			};
-		default:
-			return state;
-	}
+	error: "",
 };
 
 const useFetchCountries = () => {
 	const [{ countries, loading, error }, dispatch] = useReducer(
-		reducer,
+		countriesReducer,
 		initialState,
 	);
 
@@ -46,9 +20,9 @@ const useFetchCountries = () => {
 			try {
 				const res = await fetch(url.countries);
 				const data = await res.json();
-				dispatch({ type: FetchActions.FETCH_SUCCESS, payload: data });
+				dispatch({ type: FETCH_SUCCESS, payload: data });
 			} catch (error) {
-				dispatch({ type: FetchActions.FETCH_ERROR });
+				dispatch({ type: FETCH_ERROR });
 			}
 		};
 

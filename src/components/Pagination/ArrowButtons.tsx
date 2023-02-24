@@ -1,7 +1,7 @@
 import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri";
 import { usePaginationContext } from "../../contexts/PaginationContext";
 
-function ArrowButtons({ children }: ChildrenProps) {
+function ArrowButtons({ children }: ChildrenProp) {
 	const { forward, backward } = usePaginationContext();
 
 	return (
