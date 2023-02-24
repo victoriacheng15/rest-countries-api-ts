@@ -1,11 +1,18 @@
-import { FETCH_SUCCESS, FETCH_ERROR, SET_SEARCH, SET_SELECT } from "./constants";
-
+import {
+	FETCH_SUCCESS,
+	FETCH_ERROR,
+	SET_SEARCH,
+	SET_SELECT,
+} from "./constants";
 
 type CountriesAction =
 	| { type: typeof FETCH_SUCCESS; payload: Countries[] }
 	| { type: typeof FETCH_ERROR };
 
-export const countriesReducer = (state: CountriesState, action: CountriesAction) => {
+export const countriesReducer = (
+	state: CountriesState,
+	action: CountriesAction,
+) => {
 	switch (action.type) {
 		case FETCH_SUCCESS:
 			return {

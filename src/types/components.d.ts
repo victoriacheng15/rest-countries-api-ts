@@ -2,7 +2,6 @@ interface ChildrenProp {
 	children: React.ReactNode;
 }
 
-
 interface CountryCardProps extends Countries {
 	name: string;
 	flags: string;

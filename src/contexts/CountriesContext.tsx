@@ -35,9 +35,7 @@ export function CountriesProvider({ children }: ChildrenProp) {
 	}, []);
 
 	const selectRegion = useMemo(() => {
-		return countries.filter(({ region }) =>
-			region.includes(select),
-		);
+		return countries.filter(({ region }) => region.includes(select));
 	}, [countries, select]);
 
 	const formParameter = search ? filteredCountries : selectRegion;
