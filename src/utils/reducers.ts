@@ -28,7 +28,7 @@ type CountryAction =
 	| { type: typeof FETCH_SUCCESS; payload: Country[] }
 	| { type: typeof FETCH_ERROR };
 
-export const CountryReducer = (state: CountryState, action: CountryAction) => {
+export const countryReducer = (state: CountryState, action: CountryAction) => {
 	switch (action.type) {
 		case FETCH_SUCCESS:
 			return {
