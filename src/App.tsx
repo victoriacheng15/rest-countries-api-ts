@@ -7,7 +7,7 @@ function App() {
 	const { dark } = useThemeContext();
 
 	return (
-		<div className={`${dark && "dark"} flex flex-col min-h-screen`}>
+		<div className={`${dark && "dark"} flex min-h-screen flex-col`}>
 			<Header />
 			<Home />
 			<Footer />
