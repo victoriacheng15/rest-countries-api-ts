@@ -1,18 +1,12 @@
 # REST Countries API - TypeScript Version
 
+![screenshot](./country-information-app.jpg)
+
 This is an app that I rebuilt with TypeScript. You can see the [JS version](https://github.com/victoriacheng15/fem-rest-countries-api#readme).
 
 An app contains `search` and `dropdown` features where users can use a search box to search the desired country and use the dropdown to filter countries by regions (Africa, Americas, Asia, Europe, and Oceania). The users also can click a country to view more detailed information.
 
-[View the site live here](https://rest-countries-api-ts-vc.netlify.app/)
-
-**Tech stack:**
-
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black) ![React Router](https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white) ![Testing Library](https://img.shields.io/badge/Testing%20Library-E33332.svg?style=for-the-badge&logo=Testing-Library&logoColor=white)
-
-## The User Stories
-
-Users should be able to:
+The user should be able to:
 
 - [x] See all countries from the API on the homepage with pagination
 - [x] Search for a country using an `input` field
@@ -20,6 +14,12 @@ Users should be able to:
 - [x] Click on a country to see more detailed information on a separate page
 - [x] Click through to the border countries on the detail page
 - [x] Toggle the color scheme between light and dark mode
+
+[View the site live here](https://rest-countries-api-ts-vc.netlify.app/)
+
+## Tech stack:
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black) ![React Router](https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white) ![Testing Library](https://img.shields.io/badge/Testing%20Library-E33332.svg?style=for-the-badge&logo=Testing-Library&logoColor=white)
 
 ## Screenshots/GIFs
 
@@ -59,25 +59,23 @@ Users should be able to:
 
 <hr />
 
-## Run Locally
-
-If you would like to run this project locally, you can follow the steps below. And make sure you have `nodejs` installed on your computer.
+## Installation
 
 ```bash
 git clone git@github.com:victoriacheng15/rest-countries-api-ts.git
 ```
 
 ```bash
-cd rest-countries-api-ts.git
+cd rest-countries-api-ts
 ```
 
 ```bash
-# or your preference for the package
-npm install
+pnpm install
+# or your preference of package manager
 ```
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ## What I learned
