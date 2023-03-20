@@ -6,6 +6,7 @@ export function Github() {
 			href="https://github.com/victoriacheng15/rest-countries-api-ts#readme"
 			target="_blank"
 			rel="noreferrer"
+			aria-label="Github"
 		>
 			<FaGithub />
 		</a>
@@ -18,6 +19,7 @@ export function Twitter() {
 			href="https://twitter.com/viktoriacheng15"
 			target="_blank"
 			rel="noreferrer"
+			aria-label="Twitter"
 		>
 			<FaTwitter />
 		</a>
@@ -30,6 +32,7 @@ export function Linkedin() {
 			href="https://www.linkedin.com/in/victoriacheng15/"
 			target="_blank"
 			rel="noreferrer"
+			aria-label="Linkedin"
 		>
 			<FaLinkedin />
 		</a>
