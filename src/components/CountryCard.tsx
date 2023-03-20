@@ -17,7 +17,14 @@ function CountryCard({
 				to={`/country/${cca3}`}
 			>
 				<article className="w-full overflow-hidden rounded-lg bg-lightGray-800 shadow-lg shadow-gray-600 dark:bg-darkBlue-700 dark:shadow-gray-600 lg:basis-72">
-					<img src={flags} alt={alt} className="object-fit h-[180px] w-full" />
+					<div className="w-full">
+						<img
+							src={flags}
+							alt={alt}
+							className="object-contains w-full"
+							loading="lazy"
+						/>
+					</div>
 					<div className="flex flex-col gap-4 p-3">
 						<h2 className="text-lg font-extrabold ">{name}</h2>
 						<Paragraph
