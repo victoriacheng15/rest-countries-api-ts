@@ -10,7 +10,7 @@ function SearchBox() {
 			<input
 				value={search}
 				onChange={(e) => setSearch(e.target.value)}
-				className="outline-style h-full w-full rounded-lg p-4 pl-8 text-lightGray-900 dark:bg-darkBlue-700 dark:placeholder-lightGray-700 md:w-[480px]"
+				className="h-full w-full rounded-lg p-4 pl-8 text-gray-900 outline-dashed outline-2 dark:bg-darkBlue-700 dark:text-lightGray-700 dark:placeholder-lightGray-700 md:w-[480px]"
 				type="text"
 				placeholder="Search for a country..."
 			/>
