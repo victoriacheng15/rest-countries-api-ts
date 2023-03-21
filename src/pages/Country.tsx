@@ -1,5 +1,6 @@
 // import BackHomeBtn from "../components/BackHomBtn";
-import { BackHomeBtn, DetailedCountry } from "../components";
+import BackHomeBtn from "../components/BackHomeBtn";
+import DetailedCountry from "../components/DetailedCountry";
 
 function Country() {
 	return (

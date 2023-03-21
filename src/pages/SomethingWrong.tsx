@@ -1,4 +1,4 @@
-import { BackHomeBtn } from "../components";
+import BackHomeBtn from "../components/BackHomeBtn";
 import ErrorPage from "../components/ErrorPage";
 
 function SomethingWrong() {
