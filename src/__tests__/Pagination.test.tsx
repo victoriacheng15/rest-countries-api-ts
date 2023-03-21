@@ -1,5 +1,5 @@
 import { render, screen } from "../test-utils";
-import { Pagination } from "../components";
+import Pagination from "../components/Pagination";
 
 describe("Pagination", () => {
 	beforeEach(() => {
