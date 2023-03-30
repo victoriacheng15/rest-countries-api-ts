@@ -10,9 +10,9 @@ function App() {
 	const { dark } = useThemeContext();
 
 	return (
-		<div className={`${dark && "dark"} flex min-h-screen flex-col`}>
+		<div className={`${dark && "dark"} flex flex-col`}>
 			<Header />
-			<main className="bg-lightGray-800 py-12 text-darkBlue-900 dark:bg-darkBlue-800 dark:text-lightGray-800">
+			<main className="bg-lightGray-800 py-12 text-darkBlue-900 dark:bg-darkBlue-800 dark:text-lightGray-800 min-h-screen">
 				<div className="mx-auto flex w-11/12 max-w-7xl flex-col">
 					<Routes>
 						<Route path="/" element={<Countries />} />
