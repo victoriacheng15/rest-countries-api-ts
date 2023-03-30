@@ -13,10 +13,10 @@ function CountryCard({
 	return (
 		<>
 			<Link
-				className="flex h-auto max-w-xs flex-1 basis-[265px] duration-300 ease-in-out hover:scale-110"
-				to={`/country/${cca3}`}
+				className="flex max-w-xs duration-300 ease-in-out hover:scale-110"
+				to={`/country/${cca3}?country=${name}`}
 			>
-				<article className="w-full overflow-hidden rounded-lg bg-lightGray-800 shadow-lg shadow-gray-600 dark:bg-darkBlue-700 dark:shadow-gray-600 lg:basis-72">
+				<article className="overflow-hidden rounded-lg bg-lightGray-800 shadow-lg shadow-gray-600 dark:bg-darkBlue-700 dark:shadow-gray-600">
 					<div className="max-w-full h-auto">
 						<img
 							src={flags}
